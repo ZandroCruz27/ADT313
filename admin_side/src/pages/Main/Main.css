@@ -1,0 +1,108 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+
+.Main .container {
+  display: flex;
+  min-width: 100vw;
+  /* min-height: 100vh; */
+}
+
+
+.Main .container .outlet {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #1e1e1e;  
+  border-radius: 15px;
+  margin-left: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Main .container .outlet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.Main .container .navigation {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 260px;  
+  background-color: #1c1c1c;
+  color: #fcfcfc;
+  border-right: 2px solid #ff7043;  
+  padding-top: 40px;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.Main .container .navigation:hover {
+  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.2);  
+}
+
+
+.Main .container .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Main .container .navigation ul li {
+  padding: 12px 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.Main .container .navigation ul li.active,
+.Main .container .navigation ul li:hover {
+  background: linear-gradient(45deg, #ac1b1b, #ff7043);  
+  transform: translateX(10px);  
+  border-radius: 10px;
+}
+
+.Main .container .navigation ul li a {
+  text-decoration: none;
+  color: #fcfcfc;
+  display: block;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.Main .container .navigation ul li a:hover {
+  color: #ff7043;  
+}
+
+
+.Main .container .navigation ul li.logout {
+  cursor: pointer;
+  margin-top: auto;
+  padding: 20px 20px 10px;
+  background-color: #1c1c1c;  
+  border-radius: 10px;
+  text-align: center;
+}
+
+.Main .container .navigation ul li.logout:hover {
+  background-color: #b71c1c;  
+}
+
+.Main .container .navigation ul li.logout a {
+  color: #fcfcfc;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
